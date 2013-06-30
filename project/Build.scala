@@ -26,5 +26,9 @@ object Build extends Build {
 
   lazy val core = Project("web-client-core", file("core")).settings(defaultSettings: _*).settings(
     libraryDependencies ++= Seq(
+      "com.typesafe" %% "scalalogging-slf4j" % "1.0.+",
+      "org.slf4j" % "slf4j-api" % "1.7.+",
+      "ch.qos.logback" % "logback-classic" % "1.0.+",
+      "org.json4s" %% "json4s-native" % "3.2.+",
       "net.databinder.dispatch" %% "dispatch-core" % "0.10.+"))
 }
