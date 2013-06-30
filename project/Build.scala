@@ -21,10 +21,10 @@ object Build extends Build {
     libraryDependencies ++= Seq(
       "org.scalatest" %% "scalatest" % "2.0.+" % "test"))
 
-  lazy val client = Project("web-client", file(".")).settings(defaultSettings: _*).aggregate(
+  lazy val polyscribing = Project("polyscribing", file(".")).settings(defaultSettings: _*).aggregate(
     core)
 
-  lazy val core = Project("web-client-core", file("core")).settings(defaultSettings: _*).settings(
+  lazy val core = Project("polyscribing-core", file("core")).settings(defaultSettings: _*).settings(
     libraryDependencies ++= Seq(
       "com.typesafe" %% "scalalogging-slf4j" % "1.0.+",
       "org.slf4j" % "slf4j-api" % "1.7.+",
